@@ -37,6 +37,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Controls\MouseDragging.cs" />
+     <Compile Include="Assets\Scripts\Controls\PanelComparer.cs" />
+     <Compile Include="Assets\Scripts\Controls\ComicPanel.cs" />
+     <Compile Include="Assets\Scripts\Controls\PanelRack.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
