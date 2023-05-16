@@ -22,7 +22,7 @@ public class cursorController : MonoBehaviour
         Vector2 mouse = new Vector3(Input.mousePosition.x, Input.mousePosition.y);
         mouse = Camera.main.ScreenToWorldPoint(mouse);
 
-        this.transform.position = new Vector2(mouse.x + .1f, mouse.y - 0.75f);
+        this.transform.position = new Vector2(mouse.x + .11f, mouse.y - 0.45f);
         if (SceneManager.GetActiveScene().buildIndex == 0)
             Cursor.visible = true;
 

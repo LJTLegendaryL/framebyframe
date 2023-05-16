@@ -21,4 +21,14 @@ public class MainMenuController : MonoBehaviour
         print("Quit Game!");
         Application.Quit();
     }
+
+    public void checkPanels()
+    {
+        print("Checking Panels");
+    }
+
+    public void Settings()
+    {
+        print("Go to settings");
+    }
 }
