@@ -3,9 +3,12 @@ using UnityEngine;
 public class PanelSlot : MonoBehaviour
 {
 	public MouseControls mouseControls;
+	public PanelSlotChecker panelSlotChecker;
 	public PanelRack panelRack;
 	public float proximityDistance;
 	float distance;
+	int correctionBit;
+	bool correct;
 
 	public Transform placeObject;
 	public int targetIndex;
@@ -20,12 +23,31 @@ public class PanelSlot : MonoBehaviour
 			{
 				mouseControls.setPosition = transform;
 				
+				if(placeObject == mouseControls.selectedObject)
+				{
+					if(correctionBit == 1)
+						panelSlotChecker.totalSlotsCorrect--;
+					
+					placeObject = null;
+					correctionBit = 0;
+				}
+				
 				if(Input.GetMouseButtonDown(0))
 				{
 					placeObject = mouseControls.selectedObject;
 
-					if(placeObject == panelRack.comicPanels[targetIndex].transform)
-						Debug.Log("Correct Panel in place!");
+					correct = (placeObject == panelRack.comicPanels[targetIndex].transform);
+					
+					if(correct)
+					{
+						panelSlotChecker.totalSlotsCorrect++;
+						correctionBit = 1;
+					}
+					else if(correctionBit > 0)
+					{
+						panelSlotChecker.totalSlotsCorrect--;
+						correctionBit = 0;
+					}
 				}
 			}
 			else
