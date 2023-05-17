@@ -13,7 +13,10 @@ public class MainMenuController : MonoBehaviour
 
     public void SelectLevel(int level)
     {
-        SceneManager.LoadScene(level);
+        if (level != 0)
+            SceneManager.LoadScene("Level " + level.ToString());
+        else
+            SceneManager.LoadScene("Main Menu");
     }
 
     public void QuitGame()
