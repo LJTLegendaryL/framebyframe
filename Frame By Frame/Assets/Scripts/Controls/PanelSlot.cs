@@ -39,6 +39,7 @@ public class PanelSlot : MonoBehaviour
 						panelSlotChecker.totalSlotsCorrect--;
 						correctionBit = 0;
 					}
+					
 				}
 			}
 			else

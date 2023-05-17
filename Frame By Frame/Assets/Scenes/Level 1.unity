@@ -440,6 +440,7 @@ GameObject:
   - component: {fileID: 212050398}
   - component: {fileID: 212050400}
   - component: {fileID: 212050399}
+  - component: {fileID: 212050401}
   m_Layer: 6
   m_Name: Panel1 (3)
   m_TagString: Untagged
@@ -541,6 +542,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &212050401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212050397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb4a97ec06e7b489c6792752c1f5a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelRack: {fileID: 1520967422}
+  panelIndex: 2
 --- !u!1 &215923871
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,28 +634,13 @@ GameObject:
   m_Component:
   - component: {fileID: 218683226}
   - component: {fileID: 218683225}
-  - component: {fileID: 218683224}
   m_Layer: 0
   m_Name: handPointing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &218683224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 218683223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18c28a0be736214418e005f0ecf0b8d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCamera: {fileID: 640805450}
-  selectedObject: {fileID: 218683226}
+  m_IsActive: 0
 --- !u!212 &218683225
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -706,7 +706,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
 --- !u!1 &318740866
 GameObject:
@@ -719,6 +719,7 @@ GameObject:
   - component: {fileID: 318740867}
   - component: {fileID: 318740869}
   - component: {fileID: 318740868}
+  - component: {fileID: 318740870}
   m_Layer: 6
   m_Name: Panel1 (1)
   m_TagString: Untagged
@@ -820,6 +821,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &318740870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318740866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb4a97ec06e7b489c6792752c1f5a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelRack: {fileID: 1520967422}
+  panelIndex: 0
 --- !u!1 &333967091
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,6 +845,7 @@ GameObject:
   m_Component:
   - component: {fileID: 333967092}
   - component: {fileID: 333967093}
+  - component: {fileID: 333967094}
   m_Layer: 0
   m_Name: fifthSlot
   m_TagString: Untagged
@@ -904,6 +920,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &333967094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333967091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d5afeb15b0e494ebfc05acf9144572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseControls: {fileID: 2081314700}
+  panelSlotChecker: {fileID: 2081314702}
+  panelRack: {fileID: 1520967422}
+  proximityDistance: 1
+  placeObject: {fileID: 0}
+  targetIndex: 4
 --- !u!1 &368699866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,7 +1107,7 @@ Transform:
   - {fileID: 1254517174}
   - {fileID: 892892283}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &430878718
 GameObject:
@@ -1315,7 +1349,7 @@ Transform:
   - {fileID: 846302351}
   - {fileID: 1734344632}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &640805449
 GameObject:
@@ -1329,7 +1363,6 @@ GameObject:
   - component: {fileID: 640805450}
   - component: {fileID: 640805453}
   - component: {fileID: 640805452}
-  - component: {fileID: 640805451}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1380,25 +1413,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &640805451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 640805449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1e172c672f32c34ea56fe89880a8ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCamera: {fileID: 640805450}
-  interactableMask:
-    serializedVersion: 2
-    m_Bits: 0
-  selectedObject: {fileID: 0}
-  ding: {fileID: 0}
-  click: {fileID: 0}
 --- !u!114 &640805452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1600,6 +1614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 692236865}
   - component: {fileID: 692236866}
+  - component: {fileID: 692236867}
   m_Layer: 0
   m_Name: fourthSlot
   m_TagString: Untagged
@@ -1674,6 +1689,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &692236867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692236864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d5afeb15b0e494ebfc05acf9144572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseControls: {fileID: 2081314700}
+  panelSlotChecker: {fileID: 2081314702}
+  panelRack: {fileID: 1520967422}
+  proximityDistance: 1
+  placeObject: {fileID: 0}
+  targetIndex: 3
 --- !u!1 &787771725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,7 +1738,7 @@ Transform:
   - {fileID: 430878719}
   - {fileID: 1142255950}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &846302350
 GameObject:
@@ -1718,6 +1751,7 @@ GameObject:
   - component: {fileID: 846302351}
   - component: {fileID: 846302353}
   - component: {fileID: 846302352}
+  - component: {fileID: 846302354}
   m_Layer: 6
   m_Name: Panel1 (5)
   m_TagString: Untagged
@@ -1819,6 +1853,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &846302354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846302350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb4a97ec06e7b489c6792752c1f5a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelRack: {fileID: 1520967422}
+  panelIndex: 4
 --- !u!1 &847793918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1940,6 +1988,7 @@ GameObject:
   m_Component:
   - component: {fileID: 858363137}
   - component: {fileID: 858363138}
+  - component: {fileID: 858363139}
   m_Layer: 0
   m_Name: thirdSlot
   m_TagString: Untagged
@@ -2014,6 +2063,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &858363139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858363136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d5afeb15b0e494ebfc05acf9144572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseControls: {fileID: 2081314700}
+  panelSlotChecker: {fileID: 2081314702}
+  panelRack: {fileID: 1520967422}
+  proximityDistance: 1
+  placeObject: {fileID: 0}
+  targetIndex: 2
 --- !u!1 &892892281
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,6 +2309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 993680797}
   - component: {fileID: 993680798}
+  - component: {fileID: 993680799}
   m_Layer: 0
   m_Name: sixthSlot
   m_TagString: Untagged
@@ -2316,6 +2384,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &993680799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993680796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d5afeb15b0e494ebfc05acf9144572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseControls: {fileID: 2081314700}
+  panelSlotChecker: {fileID: 2081314702}
+  panelRack: {fileID: 1520967422}
+  proximityDistance: 1
+  placeObject: {fileID: 0}
+  targetIndex: 5
 --- !u!1 &1002236117
 GameObject:
   m_ObjectHideFlags: 0
@@ -2979,6 +3065,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1519843397}
   - component: {fileID: 1519843398}
+  - component: {fileID: 1519843399}
   m_Layer: 0
   m_Name: secondSlot
   m_TagString: Untagged
@@ -3053,6 +3140,76 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1519843399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519843396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d5afeb15b0e494ebfc05acf9144572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseControls: {fileID: 2081314700}
+  panelSlotChecker: {fileID: 2081314702}
+  panelRack: {fileID: 1520967422}
+  proximityDistance: 1
+  placeObject: {fileID: 0}
+  targetIndex: 1
+--- !u!1 &1520967421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1520967423}
+  - component: {fileID: 1520967422}
+  m_Layer: 0
+  m_Name: Panel Rack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1520967422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520967421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a4deb411aeeeb24abdb204c404a6d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comicPanels:
+  - {fileID: 318740870}
+  - {fileID: 1942762059}
+  - {fileID: 212050401}
+  - {fileID: 1634226263}
+  - {fileID: 846302354}
+  - {fileID: 1734344633}
+  currentIndex: 0
+--- !u!4 &1520967423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520967421}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.1288457, y: -1.639943, z: 20.770994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1577072221
 GameObject:
   m_ObjectHideFlags: 0
@@ -3399,6 +3556,7 @@ GameObject:
   - component: {fileID: 1634226260}
   - component: {fileID: 1634226262}
   - component: {fileID: 1634226261}
+  - component: {fileID: 1634226263}
   m_Layer: 6
   m_Name: Panel1 (4)
   m_TagString: Untagged
@@ -3500,6 +3658,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1634226263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634226259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb4a97ec06e7b489c6792752c1f5a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelRack: {fileID: 1520967422}
+  panelIndex: 3
 --- !u!1 &1734344629
 GameObject:
   m_ObjectHideFlags: 0
@@ -3511,6 +3683,7 @@ GameObject:
   - component: {fileID: 1734344632}
   - component: {fileID: 1734344631}
   - component: {fileID: 1734344630}
+  - component: {fileID: 1734344633}
   m_Layer: 6
   m_Name: Panel1(6)
   m_TagString: Untagged
@@ -3612,6 +3785,20 @@ Transform:
   m_Father: {fileID: 471677454}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1734344633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734344629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb4a97ec06e7b489c6792752c1f5a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelRack: {fileID: 1520967422}
+  panelIndex: 5
 --- !u!1 &1942762055
 GameObject:
   m_ObjectHideFlags: 0
@@ -3623,6 +3810,7 @@ GameObject:
   - component: {fileID: 1942762056}
   - component: {fileID: 1942762058}
   - component: {fileID: 1942762057}
+  - component: {fileID: 1942762059}
   m_Layer: 6
   m_Name: Panel1 (2)
   m_TagString: Untagged
@@ -3724,6 +3912,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1942762059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942762055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb4a97ec06e7b489c6792752c1f5a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelRack: {fileID: 1520967422}
+  panelIndex: 1
 --- !u!1 &1990858131
 GameObject:
   m_ObjectHideFlags: 0
@@ -3734,6 +3936,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1990858132}
   - component: {fileID: 1990858133}
+  - component: {fileID: 1990858134}
   m_Layer: 0
   m_Name: firstSlot
   m_TagString: Untagged
@@ -3808,6 +4011,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1990858134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990858131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d5afeb15b0e494ebfc05acf9144572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseControls: {fileID: 2081314700}
+  panelSlotChecker: {fileID: 2081314702}
+  panelRack: {fileID: 1520967422}
+  proximityDistance: 1
+  placeObject: {fileID: 0}
+  targetIndex: 0
 --- !u!1 &2069395451
 GameObject:
   m_ObjectHideFlags: 0
@@ -3929,6 +4150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2081314701}
   - component: {fileID: 2081314700}
+  - component: {fileID: 2081314702}
   m_Layer: 0
   m_Name: Click Controls
   m_TagString: Untagged
@@ -3945,16 +4167,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2081314699}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1e172c672f32c34ea56fe89880a8ad0, type: 3}
+  m_Script: {fileID: 11500000, guid: 794ac48a4a44c3541abf66722a04e964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 640805450}
-  interactableMask:
+  renderCamera: {fileID: 640805450}
+  interactionMask:
     serializedVersion: 2
     m_Bits: 64
   selectedObject: {fileID: 0}
-  ding: {fileID: 1142255951}
-  click: {fileID: 430878720}
+  setPosition: {fileID: 0}
 --- !u!4 &2081314701
 Transform:
   m_ObjectHideFlags: 0
@@ -3970,6 +4191,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2081314702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081314699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be64cccf651583944932b8daa68ddd4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalSlotsCorrect: 0
+  totalSlots: 6
 --- !u!1 &2116852651
 GameObject:
   m_ObjectHideFlags: 0
@@ -4005,5 +4240,5 @@ Transform:
   - {fileID: 333967092}
   - {fileID: 993680797}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
