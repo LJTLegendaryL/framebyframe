@@ -2249,9 +2249,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1614554034}
-        m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
-        m_MethodName: checkPanels
+      - m_Target: {fileID: 2081314702}
+        m_TargetAssemblyTypeName: PanelSlotChecker, Assembly-CSharp
+        m_MethodName: CheckSlots
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
