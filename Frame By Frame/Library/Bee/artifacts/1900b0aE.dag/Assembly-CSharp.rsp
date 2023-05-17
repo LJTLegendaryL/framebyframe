@@ -385,6 +385,7 @@
 "Assets/Scripts/Controls/MouseControls.cs"
 "Assets/Scripts/Controls/PanelRack.cs"
 "Assets/Scripts/Controls/PanelSlot.cs"
+"Assets/Scripts/Controls/PanelSlotChecker.cs"
 -langversion:9.0
 
 /deterministic
