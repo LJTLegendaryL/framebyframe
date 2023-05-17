@@ -23,6 +23,15 @@ public class PanelSlot : MonoBehaviour
 			{
 				mouseControls.setPosition = transform;
 				
+				if(placeObject == mouseControls.selectedObject)
+				{
+					if(correctionBit == 1)
+						panelSlotChecker.totalSlotsCorrect--;
+					
+					placeObject = null;
+					correctionBit = 0;
+				}
+				
 				if(Input.GetMouseButtonDown(0))
 				{
 					placeObject = mouseControls.selectedObject;
@@ -39,7 +48,6 @@ public class PanelSlot : MonoBehaviour
 						panelSlotChecker.totalSlotsCorrect--;
 						correctionBit = 0;
 					}
-					
 				}
 			}
 			else
